@@ -1,3 +1,8 @@
+## <small>0.0.4 (2024-04-19)</small>
+
+
+
+
 ## <small>0.0.3 (2024-04-19)</small>
 
 * fix: version ([c43cdee](https://github.com/ekakurnia1/indie/commit/c43cdee))

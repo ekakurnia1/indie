@@ -1,0 +1,41 @@
+{
+  "name": "@indiejs/release-scripts",
+  "version": "0.0.1",
+  "description": "@indiejs release scripts",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tnode scripts/build.ts",
+    "prettier": "pnpm prettier-ci --write",
+    "prettier-ci": "prettier --cache --ignore-path=.gitignore --check '**/*.{ts,json,md,yml}'",
+    "qa": "tsc && pnpm prettier-ci && pnpm build",
+    "release": "tnode scripts/release.ts"
+  },
+  "dependencies": {
+    "execa": "^8.0.1",
+    "mri": "^1.2.0",
+    "picocolors": "^1.0.0",
+    "prompts": "^2.4.2",
+    "publint": "^0.2.2",
+    "semver": "^7.5.4"
+  },
+  "devDependencies": {
+    "@arnaud-barre/tnode": "^0.19.1",
+    "@types/node": "^18.17.17",
+    "@types/prompts": "^2.4.4",
+    "@types/semver": "^7.5.2",
+    "esbuild": "^0.19.3",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  }
+}
