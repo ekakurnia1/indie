@@ -18,7 +18,7 @@ export async function getLatestTag(pkgName: string): Promise<string> {
   const tags = (await run('git', ['tag'], { stdio: 'pipe' })).stdout
     .split(/\n/)
     .filter(Boolean)
-  const prefix = pkgName === 'vite' ? 'v' : `${pkgName}@`
+  const prefix = pkgName === 'indie' ? 'v' : `${pkgName}@`
   return tags
     .filter((tag) => tag.startsWith(prefix))
     .sort((a, b) =>
@@ -56,7 +56,7 @@ export async function logRecentCommits(pkgName: string): Promise<void> {
 
 export async function updateTemplateVersions(): Promise<void> {
   // const viteVersion = fs.readJSONSync('packages/vite/package.json').version
-  const viteVersion = '^5.2.9'
+  const viteVersion = '5.2.9'
   if (/beta|alpha|rc/.test(viteVersion)) return
 
   const dir = 'packages/create-indie'

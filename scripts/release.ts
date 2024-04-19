@@ -22,7 +22,7 @@ release({
       '--commit-path',
       '.',
     ]
-    if (pkgName !== 'vite') changelogArgs.push('--lerna-package', pkgName)
+    if (pkgName !== 'indie') changelogArgs.push('--lerna-package', pkgName)
     await run('npx', changelogArgs, { cwd: `packages/${pkgName}` })
   },
 })
