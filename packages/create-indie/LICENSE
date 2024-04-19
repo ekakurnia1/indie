@@ -1,5 +1,5 @@
-# create-vite license
-create-vite is released under the MIT license:
+# create-indie license
+create-indie is released under the MIT license:
 
 MIT License
 
@@ -23,7 +23,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 # Licenses of bundled dependencies
-The published create-vite artifact additionally contains code with the following licenses:
+The published create-indie artifact additionally contains code with the following licenses:
 ISC, MIT
 
 # Bundled dependencies:

@@ -59,7 +59,7 @@ export async function updateTemplateVersions(): Promise<void> {
   const viteVersion = '^5.2.9'
   if (/beta|alpha|rc/.test(viteVersion)) return
 
-  const dir = 'packages/create-vite'
+  const dir = 'packages/create-indie'
   const templates = readdirSync(dir).filter((dir) =>
     dir.startsWith('template-'),
   )
