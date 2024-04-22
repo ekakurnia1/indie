@@ -15,7 +15,7 @@ export const publish = async ({
   packageManager,
 }: {
   defaultPackage: string;
-  getPkgDir: (pkg: string) => string;
+  getPkgDir?: (pkg: string) => string;
   provenance: boolean;
   packageManager: string;
 }) => {

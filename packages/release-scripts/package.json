@@ -1,7 +1,7 @@
 {
-  "name": "@indiejs/release-scripts",
+  "name": "@indie-app/release-scripts",
   "version": "0.0.5",
-  "description": "@indiejs release scripts",
+  "description": "@indie-app release scripts",
   "license": "MIT",
   "main": "dist/index.js",
   "type": "module",

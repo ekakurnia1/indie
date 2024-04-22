@@ -1,11 +1,11 @@
-# @indiejs/release-scripts
+# @indie-app/release-scripts
 
 This repo is used to share release & publish scripts for the org. Scripts should be executed from the workspace root via `tsx scripts/release.ts`
 
 ## release
 
 ```ts
-import { release } from "@indiejs/release-scripts";
+import { release } from "@indie-app/release-scripts";
 
 release({
   // Name of the repo for CI link
@@ -30,7 +30,7 @@ release({
 ## publish
 
 ```ts
-import { publish } from "@indiejs/release-scripts";
+import { publish } from "@indie-app/release-scripts";
 
 publish({
   // Used when tag is not `pkg@version`
