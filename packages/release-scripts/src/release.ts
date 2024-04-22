@@ -27,7 +27,7 @@ export const release = async ({
   logChangelog: (pkg: string) => Promise<void>;
   generateChangelog: (pkg: string, version: string) => Promise<void>;
   toTag: (pkg: string, version: string) => string;
-  getPkgDir: (pkg: string) => string;
+  getPkgDir?: (pkg: string) => string;
 }) => {
   let targetVersion;
 

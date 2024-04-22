@@ -25,13 +25,13 @@ await buildOrWatch({
   external: Object.keys(packageJSON.dependencies),
   plugins: [
     {
-      name: 'TypeScriptDeclarationsPlugin',
+      name: "TypeScriptDeclarationsPlugin",
       setup(build) {
         build.onEnd((result) => {
-          if (result.errors.length > 0) return
-          execSync('tsc --emitDeclarationOnly')
-        })
-      }
-    }
-  ]
+          if (result.errors.length > 0) return;
+          execSync("tsc --emitDeclarationOnly");
+        });
+      },
+    },
+  ],
 });
