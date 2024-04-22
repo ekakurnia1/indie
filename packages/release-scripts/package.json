@@ -19,7 +19,8 @@
     "prettier": "pnpm prettier-ci --write",
     "prettier-ci": "prettier --cache --ignore-path=.gitignore --check '**/*.{ts,json,md,yml}'",
     "qa": "tsc && pnpm prettier-ci && pnpm build",
-    "release": "tnode scripts/release.ts"
+    "release": "tnode scripts/release.ts",
+    "publish": "tsx scripts/publish.ts"
   },
   "dependencies": {
     "execa": "^8.0.1",
