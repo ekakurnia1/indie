@@ -53,7 +53,7 @@ export async function logRecentCommits(pkgName: string): Promise<void> {
 }
 
 release({
-  repo: '@indiejs',
+  repo: 'indie',
   packages: ['release-scripts'],
   toTag: (pkg, version) =>
     pkg === 'indie' ? `v${version}` : `${pkg}@${version}`,

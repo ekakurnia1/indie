@@ -1,4 +1,4 @@
-import semver2 from "semver";
+import semver from "semver";
 
 import {
   getPackageInfo,
@@ -46,7 +46,7 @@ export const publish = async ({
     ? "beta"
     : version.includes("alpha")
       ? "alpha"
-      : activeVersion && semver2.lt(pkg.version, activeVersion)
+      : activeVersion && semver.lt(pkg.version, activeVersion)
         ? "previous"
         : void 0;
 

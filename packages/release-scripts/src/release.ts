@@ -1,6 +1,6 @@
 import prompts from "prompts";
-import semver3 from "semver";
-import colors2 from "picocolors";
+import semver from "semver";
+import colors from "picocolors";
 import { publint } from "publint";
 import { formatMessage } from "publint/utils";
 import {
@@ -85,7 +85,7 @@ export const release = async ({
     }
   }
 
-  if (!semver3.valid(targetVersion)) {
+  if (!semver.valid(targetVersion)) {
     throw new Error(`invalid target version: ${targetVersion}`);
   }
 
@@ -102,7 +102,7 @@ export const release = async ({
   const { yes } = await prompts({
     type: "confirm",
     name: "yes",
-    message: `Releasing ${colors2.yellow(tag)} Confirm?`,
+    message: `Releasing ${colors.yellow(tag)} Confirm?`,
   });
 
   if (!yes) return;
@@ -132,7 +132,7 @@ export const release = async ({
 Dry run finished - run git diff to see package changes.`);
   } else {
     console.log(
-      colors2.green(
+      colors.green(
         `
 Pushed, publishing should starts shortly on CI.
 https://github.com/ekakurnia1/${repo}/actions/workflows/publish.yml`,
