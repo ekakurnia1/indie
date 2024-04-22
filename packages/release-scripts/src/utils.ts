@@ -2,6 +2,7 @@ import { writeFileSync, readFileSync } from "node:fs";
 import path from "node:path";
 import colors from "picocolors";
 import { execa } from "execa";
+import type { ExecaError } from "execa";
 import semver from "semver";
 import mri from "mri";
 
@@ -147,7 +148,7 @@ export async function getActiveVersion(npmName: string) {
     return (await run("npm", ["info", npmName, "version"], { stdio: "pipe" }))
       .stdout;
   } catch (e) {
-    if (e.stderr.startsWith("npm ERR! code E404")) return;
+    if ((e as ExecaError).stderr.startsWith("npm ERR! code E404")) return;
     throw e;
   }
 }

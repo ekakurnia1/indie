@@ -1,6 +1,9 @@
+# release-scripts license
+release-scripts is released under the MIT license:
+
 MIT License
 
-Copyright (c) 2024-present, Indie contributors
+Copyright (c) 2024-present, Eka Kurniawan and Indie contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +22,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+# Licenses of bundled dependencies
+The published release-scripts artifact additionally contains code with the following licenses:
+
+
+# Bundled dependencies:

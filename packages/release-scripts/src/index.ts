@@ -1,4 +1,2 @@
-import { publish } from "./publish";
-import { release } from "./release";
-
-export { publish, release };
+export { publish } from './publish'
+export { release } from './release'

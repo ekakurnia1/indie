@@ -1,5 +1,5 @@
 import semver2 from "semver";
-import mri from "mri";
+
 import {
   getPackageInfo,
   getActiveVersion,
