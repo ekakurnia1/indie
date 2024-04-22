@@ -1,35 +1,35 @@
-import path from 'node:path'
-import url from 'node:url'
-import { defineBuildConfig } from 'unbuild'
-import licensePlugin from '../../scripts/rollupLicensePlugin'
+import path from "node:path";
+import url from "node:url";
+import { defineBuildConfig } from "unbuild";
+import licensePlugin from "../../scripts/rollupLicensePlugin";
 
-const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
+const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
 export default defineBuildConfig({
-  entries: ['src/index'],
+  entries: ["src/index"],
   clean: true,
   rollup: {
     inlineDependencies: true,
     esbuild: {
-      target: 'node18',
+      target: "node18",
       minify: true,
     },
   },
   alias: {
     // we can always use non-transpiled code since we support node 18+
-    prompts: 'prompts/lib/index.js',
+    prompts: "prompts/lib/index.js",
   },
   hooks: {
-    'rollup:options'(ctx, options) {
+    "rollup:options"(ctx, options) {
       options.plugins = [
         options.plugins,
         // @ts-expect-error TODO: unbuild uses rollup v3 and Vite uses rollup v4
         licensePlugin(
-          path.resolve(__dirname, './LICENSE'),
-          'release-scripts license',
-          'release-scripts',
+          path.resolve(__dirname, "./LICENSE"),
+          "release-scripts license",
+          "release-scripts",
         ),
-      ]
+      ];
     },
   },
-})
+});

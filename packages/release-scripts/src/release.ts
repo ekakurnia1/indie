@@ -3,7 +3,16 @@ import semver3 from "semver";
 import colors2 from "picocolors";
 import { publint } from "publint";
 import { formatMessage } from "publint/utils";
-import { getPackageInfo, getVersionChoices, args, isDryRun, step, updateVersion, runIfNotDry, run } from "./utils";
+import {
+  getPackageInfo,
+  getVersionChoices,
+  args,
+  isDryRun,
+  step,
+  updateVersion,
+  runIfNotDry,
+  run,
+} from "./utils";
 
 export const release = async ({
   repo,
@@ -11,7 +20,7 @@ export const release = async ({
   logChangelog,
   generateChangelog,
   toTag,
-  getPkgDir
+  getPkgDir,
 }: {
   repo: string;
   packages: string[];
@@ -22,15 +31,19 @@ export const release = async ({
 }) => {
   let targetVersion;
 
-  const selectedPkg = packages.length === 1 ? packages[0] : (await prompts({
-    type: "select",
-    name: "pkg",
-    message: "Select package",
-    choices: packages.map((i) => ({ value: i, title: i }))
-  })).pkg;
+  const selectedPkg =
+    packages.length === 1
+      ? packages[0]
+      : (
+          await prompts({
+            type: "select",
+            name: "pkg",
+            message: "Select package",
+            choices: packages.map((i) => ({ value: i, title: i })),
+          })
+        ).pkg;
 
-  if (!selectedPkg)
-    return;
+  if (!selectedPkg) return;
 
   await logChangelog(selectedPkg);
 
@@ -39,17 +52,15 @@ export const release = async ({
   const { messages } = await publint({ pkgDir });
 
   if (messages.length) {
-    for (const message of messages)
-      console.log(formatMessage(message, pkg));
+    for (const message of messages) console.log(formatMessage(message, pkg));
 
     const { yes: yes2 } = await prompts({
       type: "confirm",
       name: "yes",
-      message: `${messages.length} messages from publint. Continue anyway?`
+      message: `${messages.length} messages from publint. Continue anyway?`,
     });
 
-    if (!yes2)
-      process.exit(1);
+    if (!yes2) process.exit(1);
   }
 
   if (!targetVersion) {
@@ -57,7 +68,7 @@ export const release = async ({
       type: "select",
       name: "release",
       message: "Select release type",
-      choices: getVersionChoices(pkg.version)
+      choices: getVersionChoices(pkg.version),
     });
 
     if (release2 === "custom") {
@@ -65,7 +76,7 @@ export const release = async ({
         type: "text",
         name: "version",
         message: "Input custom version",
-        initial: pkg.version
+        initial: pkg.version,
       });
 
       targetVersion = res.version;
@@ -91,11 +102,10 @@ export const release = async ({
   const { yes } = await prompts({
     type: "confirm",
     name: "yes",
-    message: `Releasing ${colors2.yellow(tag)} Confirm?`
+    message: `Releasing ${colors2.yellow(tag)} Confirm?`,
   });
 
-  if (!yes)
-    return;
+  if (!yes) return;
 
   step("\nUpdating package version...");
   updateVersion(pkgPath, targetVersion);
@@ -125,8 +135,8 @@ Dry run finished - run git diff to see package changes.`);
       colors2.green(
         `
 Pushed, publishing should starts shortly on CI.
-https://github.com/ekakurnia1/${repo}/actions/workflows/publish.yml`
-      )
+https://github.com/ekakurnia1/${repo}/actions/workflows/publish.yml`,
+      ),
     );
   }
   console.log();
