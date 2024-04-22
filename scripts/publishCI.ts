@@ -1,4 +1,4 @@
-import { publish } from '@vitejs/release-scripts'
+import { publish } from '@indie-app/release-scripts'
 
 // Check the tag passed in CI, and skip provenance if tag has `@` due to
 // https://github.com/slsa-framework/slsa-github-generator/pull/2758 not released

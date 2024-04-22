@@ -5,4 +5,9 @@ import { publish } from '../dist/index'
 const tag = process.argv.slice(2)[0] ?? ''
 const provenance = !tag.includes('@')
 
-publish({ defaultPackage: '@indie-app/release-scripts', provenance, packageManager: 'pnpm' })
+publish({
+  defaultPackage: '@indie-app/release-scripts',
+  provenance,
+  packageManager: 'pnpm',
+  getPkgDir: (pkg) => `.`,
+})

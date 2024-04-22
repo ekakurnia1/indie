@@ -1,4 +1,4 @@
-import { release } from '@vitejs/release-scripts'
+import { release } from '@indie-app/release-scripts'
 import colors from 'picocolors'
 import { logRecentCommits, run, updateTemplateVersions } from './releaseUtils'
 
