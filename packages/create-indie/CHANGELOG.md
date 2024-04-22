@@ -1,3 +1,9 @@
+## <small>0.0.5 (2024-04-22)</small>
+
+* feat: release-scripts ([cf01f5f](https://github.com/ekakurnia1/indie/commit/cf01f5f))
+
+
+
 ## <small>0.0.4 (2024-04-19)</small>
 
 
