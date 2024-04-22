@@ -23,7 +23,6 @@
     "node": "^18.0.0 || >=20.0.0"
   },
   "devDependencies": {
-    "rollup-plugin-license": "^3.0.1",
     "@types/minimist": "^1.2.5",
     "@types/prompts": "^2.4.9",
     "cross-spawn": "^7.0.3",

@@ -12,7 +12,7 @@
 </p>
 <br/>
 
-# Indie ⚡
+# Indie 🇮🇩
 
 > Next Generation Frontend Tooling
 
@@ -20,7 +20,7 @@
 
 | Package                                         | Version (click for changelogs)                                                                                                    |
 | ----------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------- |
-| [create-indie](packages/create-indie)             | [![create-indie version](https://img.shields.io/npm/v/create-indie.svg?label=%20)](packages/create-indie/CHANGELOG.md)               |
+| [create-indie](packages/create-indie)             | [![create-indie version](https://img.shields.io/npm/v/create-indie-app.svg?label=%20)](packages/create-indie/CHANGELOG.md)               |
 
 
 ## License
