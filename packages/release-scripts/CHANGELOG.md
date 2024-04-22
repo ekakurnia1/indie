@@ -1,3 +1,10 @@
+## <small>0.0.6 (2024-04-22)</small>
+
+* refactor: duplicate import ([699a51a](https://github.com/ekakurnia1/indie/commit/699a51a))
+* refactor: indiejs to indie-app ([e3edebd](https://github.com/ekakurnia1/indie/commit/e3edebd))
+
+
+
 ## <small>0.0.5 (2024-04-22)</small>
 
 

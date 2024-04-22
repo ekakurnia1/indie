@@ -1,6 +1,6 @@
 {
   "name": "@indie-app/release-scripts",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "@indie-app release scripts",
   "license": "MIT",
   "main": "dist/index.js",
