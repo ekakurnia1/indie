@@ -1,3 +1,9 @@
+## <small>0.0.4 (2024-04-22)</small>
+
+* feat: getPackageInfo ([c504f6c](https://github.com/ekakurnia1/indie/commit/c504f6c))
+
+
+
 ## <small>0.0.3 (2024-04-22)</small>
 
 * fix: relase-scripts ([3393248](https://github.com/ekakurnia1/indie/commit/3393248))
