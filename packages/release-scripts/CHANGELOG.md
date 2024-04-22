@@ -1,3 +1,8 @@
+## <small>0.0.5 (2024-04-22)</small>
+
+
+
+
 ## <small>0.0.4 (2024-04-22)</small>
 
 * feat: getPackageInfo ([c504f6c](https://github.com/ekakurnia1/indie/commit/c504f6c))
