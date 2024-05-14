@@ -56,7 +56,7 @@ export async function logRecentCommits(pkgName: string): Promise<void> {
 
 export async function updateTemplateVersions(): Promise<void> {
   // const viteVersion = fs.readJSONSync('packages/vite/package.json').version
-  const viteVersion = '5.2.9'
+  const viteVersion = '5.2.11'
   if (/beta|alpha|rc/.test(viteVersion)) return
 
   const dir = 'packages/create-indie'

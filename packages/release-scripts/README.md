@@ -9,7 +9,7 @@ import { release } from "@indie-app/release-scripts";
 
 release({
   // Name of the repo for CI link
-  repo: "release-scripts",
+  repo: "indie",
   // List of options. Choice will be available in following callback as `pkg`
   packages: ["release-scripts"],
   toTag: (pkg, version) =>
